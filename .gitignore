@@ -4,4 +4,7 @@
 *.nro
 *.nso
 *.pfs0
+*.3dsx
+*.smdh
 /build
+/.vscode
