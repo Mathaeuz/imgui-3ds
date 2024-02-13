@@ -17,9 +17,9 @@ include $(DEVKITARM)/3ds_rules
 #---------------------------------------------------------------------------------
 TARGET		:=	$(shell basename $(CURDIR))
 BUILD		:=	build
-SOURCES		:=	../../imgui
+SOURCES		:=	../../source
 DATA		:=	data
-INCLUDES	:=	../../imgui
+INCLUDES	:=	../..
 
 #---------------------------------------------------------------------------------
 # options for code generation
@@ -94,7 +94,7 @@ $(BUILD): lib
 	@[ -d $@ ] || mkdir -p $@
 	@$(MAKE) --no-print-directory -C $(BUILD) -f $(CURDIR)/Makefile
 	@mkdir -p include/imgui3ds
-	@$(foreach header,$(HFILES),cp $(INCLUDES)/$(header) include/imgui3ds)
+	@$(foreach header,$(HFILES),cp $(SOURCES)/$(header) include/imgui3ds)
 
 #---------------------------------------------------------------------------------
 clean:

@@ -3,12 +3,12 @@
 //   This software is dual-licensed to the public domain and under the following
 //   license: you are granted a perpetual, irrevocable license to copy, modify,
 //   publish, and distribute this file as you see fit.
-#include "imgui_sw.h"
+#include "source/imgui_sw.h"
 
 #include <cmath>
 #include <vector>
 
-#include "imgui.h"
+#include "imgui/imgui.h"
 
 namespace imgui_sw {
 namespace {
